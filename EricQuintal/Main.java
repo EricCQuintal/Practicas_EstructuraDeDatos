@@ -14,6 +14,12 @@ public class Main {
         aristar.ImprimirVolumen();
         aristar.AreaTetraedro(arista);
         aristar.ImprimirArea();
+        PrismaRectangular prisma=new PrismaRectangular();
+        System.out.println(".................................................................");
+        prisma.CalcularArea();
+        System.out.println(".................................................................");
+        prisma.CalcularVolumen();
     }
+
     
 }
