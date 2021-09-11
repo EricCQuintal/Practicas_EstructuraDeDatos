@@ -33,11 +33,11 @@ public class TetraedroTDA {
     return calcarea;
   }
   public void ImprimirVolumen() {
-    System.out.println("El volumen es: "+ calc4 +" "+ "U^3");
+    System.out.println("El volumen Del tetraedro es: "+ calc4 +" "+ "U^3");
     
   }
   public void ImprimirArea() {
-    System.out.println("El Area es: "+ calcarea+" "+ "U^2");
+    System.out.println("El Area del tetraedro es: "+ calcarea+" "+ "U^2");
   }
   
   
