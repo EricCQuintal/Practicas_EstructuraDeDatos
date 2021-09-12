@@ -2,12 +2,12 @@ package EricQuintal;
 
 import java.util.Scanner;
 
-public class PrismaRectangular {
+public class PrismaRectangular implements InterfaceFiguras{
 
 double base,ancho,altura,areatotal,areabase,arealateral,volumen;
 
 
-public void CalcularArea() {
+public void CalcularArea(double area) {
    
     System.out.println("CALCULAR AREA PRISMA RECTANGULAR");
     System.out.println(".................................................................");
@@ -31,7 +31,7 @@ public void CalcularArea() {
    
 }
 
-public void CalcularVolumen() {
+public void CalcularVolumen(double volumen) {
    
     System.out.println("CALCULAR VOLUMEN PRISMA RECTANGULAR");
     System.out.println(".................................................................");
@@ -53,4 +53,5 @@ public void CalcularVolumen() {
     System.out.println("El volumen del prisma rectangular es:  "+ volumen+" "+"U^3");
 
 }
+
 }
