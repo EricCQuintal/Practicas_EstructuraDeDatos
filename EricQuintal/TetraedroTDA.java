@@ -44,7 +44,7 @@ public class TetraedroTDA implements InterfaceFiguras {
     // TODO Auto-generated method stub
     System.out.println(".................................................................");
     System.out.println("Calcular Volumen Tetraedro");
-    System.out.println(".................................................................");
+    
     Scanner sc=new Scanner(System.in);
         
     System.out.println("Ingrese el tamaño arista: ");

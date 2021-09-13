@@ -14,8 +14,9 @@ private double base,ancho,altura,areatotal,areabase,arealateral;
 //las operaciones para saber que cantidad tiene el area
 public void CalcularArea(double area) {
    
-    System.out.println("CALCULAR AREA PRISMA RECTANGULAR");
+    System.out.println("PROGRAMA QUE CALCULA AREA Y VOLUMEN DE PRISMA RECTANGULAR");
     System.out.println(".................................................................");
+    System.out.println("Calcular area prisma rectangular");
     System.out.print("Ingresa el valor Base: ");
     Scanner b=new Scanner(System.in);
     base=b.nextDouble();
@@ -40,10 +41,7 @@ public void CalcularArea(double area) {
 //del volumen de la figura geometrica
 public void CalcularVolumen(double volumen) {
    
-    System.out.println("CALCULAR VOLUMEN PRISMA RECTANGULAR");
-    System.out.println(".................................................................");
-   
-
+    System.out.println("Calcular volumen prisma rectangular");
     System.out.print("Ingresa el valor Base: ");
     Scanner b=new Scanner(System.in);
     base=b.nextDouble();

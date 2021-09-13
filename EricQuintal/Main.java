@@ -26,6 +26,12 @@ public class Main {
         prisma.CalcularArea(area);
         System.out.println(".................................................................");
         prisma.CalcularVolumen(volumen);
+        System.out.println(".................................................................");
+        Cubo cubo1=new Cubo();
+        cubo1.CalcularArea(area);
+        System.out.println(".................................................................");
+        cubo1.CalcularVolumen(volumen);
+
     }
     
 
