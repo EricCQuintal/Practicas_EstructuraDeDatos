@@ -1,16 +1,21 @@
 package EricQuintal;
-
+//se agrega la libreria tipo scaner 
 import java.util.Scanner;
-
+//se aplica el mismo procedimiento para realizar la implemetacion de la interfaz
+//api java implements
 public class TetraedroTDA implements InterfaceFiguras {
+  //atributos
+  //se asigna los datos a usar atributos asignados
   private double arista;
   private double calc1,calc2,calc3,calc4;
   private double calca2,calca4;
   private float calca1,calca3;
   private double altura;
   private double calcarea;
-  
-  @Override
+  //metodos 
+  //se asigna el metodo para el calculo del area por medio de la arista 
+  //del tetraedro 
+    @Override
   public void CalcularArea(double area) {
     System.out.println(".................................................................");
     System.out.println("PROGRAMA CALCULA EL AREA Y VOLUMEN TETRAEDRO");
@@ -32,6 +37,8 @@ public class TetraedroTDA implements InterfaceFiguras {
     calcarea= ((arista*altura)/2)*4;
     System.out.println("El Area del tetraedro es: "+ calcarea+" "+ "U^2");
   }
+  //Este metodo hace el calculo que corresponde a obtener el volumen del 
+  //tetraedro
   @Override
   public void CalcularVolumen(double volumen) {
     // TODO Auto-generated method stub
