@@ -1,12 +1,17 @@
 package EricQuintal;
-
+//se importa la libreia scanner para poder obtener los datos por medio del 
+//teclado 
 import java.util.Scanner;
-
+//se asigna la clase a trabajar esto incluye la implementacion de la interfaz 
+//esta llamada InterfaceFiguras se implementa con el api java implements
+//al implementar esta interfas pedira los metodos asignados en la interfaz
 public class PrismaRectangular implements InterfaceFiguras{
+//se asignan las varibles o atributos de la clase que es el prisma rectangular 
+private double base,ancho,altura,areatotal,areabase,arealateral;
 
-double base,ancho,altura,areatotal,areabase,arealateral,volumen;
-
-
+//metodos 
+//Este es el metodo asignado por la interfaz esta se encarga de calcular y hacer 
+//las operaciones para saber que cantidad tiene el area
 public void CalcularArea(double area) {
    
     System.out.println("CALCULAR AREA PRISMA RECTANGULAR");
@@ -30,7 +35,9 @@ public void CalcularArea(double area) {
     System.out.println("El area total del PRISMA rectangular es: "+areatotal+" "+"U^2");
    
 }
-
+//metodo
+//Este segundo metodo es el encargado de realizar la operacion y calculo 
+//del volumen de la figura geometrica
 public void CalcularVolumen(double volumen) {
    
     System.out.println("CALCULAR VOLUMEN PRISMA RECTANGULAR");
