@@ -1,15 +1,9 @@
 package EricQuintal;
 
-public class Esfera implements InterfaceFiguras {
+public class cono implements InterfaceFiguras {
 
     @Override
     public void CalcularArea(double area) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void CalcularVolumen(double volumen) {
         // TODO Auto-generated method stub
         
     }
@@ -20,7 +14,10 @@ public class Esfera implements InterfaceFiguras {
         
     }
 
-    
-
+    @Override
+    public void CalcularVolumen(double volumen) {
+        // TODO Auto-generated method stub
+        
+    }
     
 }
