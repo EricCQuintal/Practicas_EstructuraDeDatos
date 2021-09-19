@@ -21,8 +21,7 @@ public class Paso_3 {
 
     MostrarListado(listado);
     n= Integer.parseInt(JOptionPane.showInputDialog(null, "¿Que elemento vas a modificar de la lista?\n Elije un numero: "));
-    listado.set((n-1),"modificado");
-
+    listado.set((n-1),tempo=JOptionPane.showInputDialog(null, "Escribe una palabra: "));
 
     MostrarListado(listado);
     n= Integer.parseInt(JOptionPane.showInputDialog(null, "¿Que elemento vas a eliminar de la lista?\n Elije un numero: "));
@@ -32,7 +31,7 @@ public class Paso_3 {
  }
 
 private static void MostrarListado(ArrayList<String> listado) {
-System.out.println("\nElementos");
+System.out.println("\nElementos de la lista");
 for (int i=0; i<listado.size(); i++) {
     System.out.println((i+1)+"."+listado.get(i));  
     
