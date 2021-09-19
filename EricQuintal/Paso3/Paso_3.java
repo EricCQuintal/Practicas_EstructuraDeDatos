@@ -20,11 +20,11 @@ public class Paso_3 {
      } while (!resp.equals("n"));
 
     MostrarListado(listado);
-    n= Integer.parseInt(JOptionPane.showInputDialog(null, "¿Que elemento vas a modificar de la lista?\n Elije un numero: "));
-    listado.set((n-1),tempo=JOptionPane.showInputDialog(null, "Escribe una palabra: "));
+    n= Integer.parseInt(JOptionPane.showInputDialog(null, "¿Que elemento vas a modificar de la lista?\n Elije un numero de la lista: "));
+    listado.set((n-1),tempo=JOptionPane.showInputDialog(null, "Escribe nueva palabra: "));
 
     MostrarListado(listado);
-    n= Integer.parseInt(JOptionPane.showInputDialog(null, "¿Que elemento vas a eliminar de la lista?\n Elije un numero: "));
+    n= Integer.parseInt(JOptionPane.showInputDialog(null, "¿Que elemento vas a eliminar de la lista?\n Elije un numero de la lista: "));
     listado.remove((n-1));
     MostrarListado(listado);
     
