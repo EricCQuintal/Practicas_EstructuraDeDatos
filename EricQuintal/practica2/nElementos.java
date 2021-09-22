@@ -33,17 +33,14 @@ public class nElementos {
             System.out.print((i+1)+".Ingrese un numero: ");
             numeros[i]=sc.nextInt();
 
-
-            
         } 
-        //Este metodo nos proporcionara y mostrara los datos ya proporcionado 
-        //por el usuario 
+        //Este metodo nos proporcionara y mostrara los datos ya proporcionados por el usuario 
         System.out.println("............................................. ");
         System.out.println("Los elementos del arreglo son: ");
         System.out.println("............................................. ");
-        //de la misma maneraa se iniciara un bucle for y este nos proporcionara
-        //las mismas concdiciones con la diferencia que este nos mostrara
-        //el listado con los datos de los elementos que disponemos
+        //de la misma maneraa se iniciara un bucle for y este nos proporcionaralas mismas condiciones 
+        //con la diferencia que este nos mostrara el listado con los datos de los elementos que 
+        //disponemos
         for (int i=0; i<nElementos; i++){
             System.out.println((i+1)+". "+numeros[i]);
         }
