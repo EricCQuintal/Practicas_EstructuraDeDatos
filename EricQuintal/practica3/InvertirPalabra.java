@@ -1,7 +1,6 @@
 package EricQuintal.practica3;
 
-import java.util.ArrayList;
-
+//se ingresa libreria correspondiente 
 import javax.swing.JOptionPane;
 
 public class InvertirPalabra {
@@ -26,12 +25,14 @@ public class InvertirPalabra {
     System.out.println("La palabra invertida es: "+invertirPalabra(palabra, palabra.length()-1));
     System.out.println("********************************************************");   
 }
+//Este es el metodo recursivo que  
 public static String invertirPalabra( String palabra, int longitud){
-         
+     //condicion base     
     if(longitud==0){
-        
+        System.out.println(""+palabra.charAt(longitud));
         return palabra.charAt(longitud)+"";
     }else{
+       
         return palabra.charAt(longitud) + (invertirPalabra(palabra, longitud-1));
     }
       
