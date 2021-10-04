@@ -13,7 +13,7 @@ public class PrincipalMain {
         
         BufferedReader teclado=new BufferedReader(new InputStreamReader(System.in));
         System.out.println(" CREAR PILA PROGRAMA ");
-        System.out.println(" TECLEA LOS ELEMENTOS DE LA PILA TENRMINA OPERACION CON -1  ");
+        System.out.println(" TECLEA LOS ELEMENTOS DE LA PILA TERMINA OPERACION CON -1  ");
         try {
             pilaprueba=new Pilas();
             do {
@@ -28,13 +28,13 @@ public class PrincipalMain {
 
                 "\n--------------------------------------\n"+
                 "                  menu                   \n "+
-                "1.- Insertar\n"+
+                "\n1.- Insertar\n"+
                 "2.- Quitar\n"+
                 "3.- Checar si pila esta vacia\n"+
                 "4.- checar si pila esta llena\n"+
                 "5.- Limpiar pila\n"+
-                "6.-Checar cima \n"+
-                "7.-checar tamaño de la pila\n"+
+                "6.- Checar cima \n"+
+                "7.- checar tamaño de la pila\n"+
                 "8.- Mostrar pila\n"+
                 "9.- Salir\n"+
                 "Elige una opcion:\n"+
@@ -43,15 +43,16 @@ public class PrincipalMain {
 
                 
                 );
-                opcion=Integer.parseInt(JOptionPane.showInputDialog("\n--------------------------------------\n"+
-                "\n                  menu                   \n "+
-                "\n 1.- Insertar\n"+
+                opcion=Integer.parseInt(JOptionPane.showInputDialog(
+                "\n--------------------------------------\n"+
+                "\n                  menu                \n"+
+                "\n1.- Insertar\n"+
                 "2.- Quitar\n"+
                 "3.- Checar si pila esta vacia\n"+
                 "4.- checar si pila esta llena\n"+
                 "5.- Limpiar pila\n"+
-                "6.-Checar cima \n"+
-                "7.-checar tamaño de la pila\n"+
+                "6.- Checar cima \n"+
+                "7.- checar tamaño de la pila\n"+
                 "8.- Mostrar pila\n"+
                 "9.- Salir\n"+
                 "Elige una opcion:\n"+
@@ -61,11 +62,32 @@ public class PrincipalMain {
                 switch (opcion) {
                     case 1:
                     System.out.println("INGRESA UN ELEMENTO A LA PILA");
-                    element=Integer.parseInt(teclado.readLine());
-                    pilaprueba.InsertarElemento(elementos);
-                        
+                    elementos=Integer.parseInt(JOptionPane.showInputDialog("Dijite los elementos de la pila"));
+                    pilaprueba.InsertarElemento(elementos);  
                         break;
-                
+                        case 2:
+                        if (!pilaprueba.PilaVacia()) {
+                           System.out.println("se quito el elemento"+pilaprueba.Quitar()); 
+                        }
+                        case 3:
+                        if (pilaprueba.PilaVacia()) {
+                           System.out.println("La pila esta vacia "); 
+                        }else{
+                            System.out.println("La pila tiene datos "); 
+                        }
+                        break;
+                        case 4:
+                        if (pilaprueba.PilaLlena()) {
+                           System.out.println("La pila esta llena "); 
+                        }else{
+                            System.out.println("La pila no tiene datos "); 
+                        }
+                        break;
+                        case 8:
+                        pilaprueba.MostrarPila();
+                            
+                            break;
+                    
                     default:
                         break;
                 }
