@@ -1,6 +1,6 @@
 package EricQuintal.Practica4;
 import java.io.*;
-import java.util.Scanner;
+
 
 import javax.swing.JOptionPane;
 
@@ -67,7 +67,8 @@ public class PrincipalMain {
                         break;
                         case 2:
                         if (!pilaprueba.PilaVacia()) {
-                           System.out.println("se quito el elemento"+pilaprueba.Quitar()); 
+                           System.out.println("se quito el elemento pila");
+                           pilaprueba.Quitar(elementos); 
                         }
                         case 3:
                         if (pilaprueba.PilaVacia()) {
@@ -82,6 +83,24 @@ public class PrincipalMain {
                         }else{
                             System.out.println("La pila no tiene datos "); 
                         }
+                        break;
+                        case 5:
+                        if(pilaprueba.PilaLlena()){
+                         pilaprueba.LimpiarPila(elementos);
+                        }
+                       
+                        
+                        break;
+                        case 6:
+                        if (pilaprueba.PilaLlena()) {
+                           
+                            pilaprueba.ChecarCimapila();
+                            
+                        }
+                        break;
+                        case 7:
+                        pilaprueba.TamanioPila();
+                        
                         break;
                         case 8:
                         pilaprueba.MostrarPila();

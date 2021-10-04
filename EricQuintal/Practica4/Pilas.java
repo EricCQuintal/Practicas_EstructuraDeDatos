@@ -1,19 +1,16 @@
 package EricQuintal.Practica4;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
-import javax.swing.JOptionPane;
 
 public class Pilas {
-    private static final int pruetamanioPi=3;
+    private static final int pruetamanioPila=4;
     private int cimapila;
     private int listapi[];
     
     //constructor 
     public Pilas(){
         this.cimapila=-1;
-        this.listapi=new int [pruetamanioPi];
+        this.listapi=new int [pruetamanioPila];
     }
 
     /*metodo con la operacion insertar dato al array
@@ -53,7 +50,7 @@ public class Pilas {
     //los elementos de la pila y verificar con cuantos datos cuenta la pia para 
     //para saber si esta llena o vacia
     public boolean PilaLlena(){
-        return this.cimapila==pruetamanioPi-1;
+        return this.cimapila==pruetamanioPila-1;
 
     }
     //metodo que verifica si la pila esta vacia es decir verifica si este
@@ -85,36 +82,70 @@ public class Pilas {
             
             
         }
-       
-        //metodo quitar 
-        public int Quitar(){
-            if(PilaVacia()){
-                System.out.println("pila vacia no se puede extraer ningun elemento");
-            }
-            int aux;
-            aux=listapi[cimapila];
+        /*public void Quitar(int elemento){
+            //mostrar el ultimo valor y eleiminarlo
+             if(PilaVacia()){
+                 System.out.println("no se puede extraer ningun elemento");
+
+             }
+            elemento=listapi[cimapila];
             cimapila--;
-            return aux;
+            elemento=listapi.length-1; 
             
-            
+        }*/
+
+        //metodo quitar 
+        public void Quitar(int elemento){
+            //mostrar el ultimo valor y eleiminarlo
+             if(PilaVacia()){
+                 System.out.println("no se puede extraer ningun elemento");
+
+             }
+            elemento=listapi[cimapila];
+            cimapila--;
+            elemento=listapi.length-1; 
             
         }
 
         //metodo cima de la pila 
-        public int Cimapila(){
+        public void ChecarCimapila(){
             if (PilaVacia()) {
-                System.out.println("pila vacia");
-                return listapi[cimapila];
-                
+                System.out.println("pila vacia");  
+            }else{
+                System.out.println("La cima de la pila es: "+listapi[cimapila]);
             }
-            return listapi[cimapila];
+            
 
         }
+        //metodo limpiar pila 
+        public void LimpiarPila(int aux){
+            if (PilaLlena()) {
+                while (cimapila<=listapi[cimapila]) {
+                    aux=listapi[cimapila];
+                    cimapila--;
+                    aux=listapi.length-3;
+                    System.out.println("SE QUITO ELEMENTO CON EXITO: "+aux); 
+                }
+               
+              
+              
+            }
+        }
+        //metodo tamanio pila 
+        public int TamanioPila(){
+         
+            System.out.println("El tamaño de la pila es: "+ pruetamanioPila);
+            return pruetamanioPila;
+        }
+
+    }
+
+
         
 
 
 
-    }
+    
                 
             
         

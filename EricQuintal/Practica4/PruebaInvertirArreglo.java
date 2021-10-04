@@ -1,7 +1,5 @@
 package EricQuintal.Practica4;
 
-
-
 public class PruebaInvertirArreglo {
    
 
