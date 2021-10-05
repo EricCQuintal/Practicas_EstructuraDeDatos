@@ -1,24 +1,29 @@
-package EricQuintal.Practica4;
+package EricQuintal.Practica4_paso2;
 
 
-//se importo las librerias JOptionPane para visusalizar 
+
 import javax.swing.JOptionPane;
-//la calse principal main 
+
+
+
 public class PrincipalMain {
     public static void main(String[] args) {
+        /*Paso2_PilaDinamica pila=new Paso2_PilaDinamica();
+        int x;
+        BufferedReader teclado=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("dijite numero de elementos: ");*/
+         
         //se crearon variables a usar 
-        Pilas pilaprueba;//esta variable corresponde ala clase pilas 
-        int opcion;//se creo la variable opcion para ser instanciada y usada en 
-                   //estructura switch
-        int elementos;//los elementos de la pila
-        
-        
-        try {
-            pilaprueba=new Pilas();
+         Paso2_PilaDinamica pilaprueba;//esta variable corresponde ala clase pilas 
+         int opcion;//se creo la variable opcion para ser instanciada y usada en 
+                    //estructura switch
+         int elementos;//los elementos de la pila
+         try {
+            pilaprueba=new Paso2_PilaDinamica();
             do {
                
                 elementos=Integer.parseInt(JOptionPane.showInputDialog("\nCREAR PILA PROGRAMA\nTECLEA LOS ELEMENTOS DE LA PILA TERMINA OPERACION CON -1\nDijite los elementos de la pila"));
-                pilaprueba.InsertarElemento(elementos);
+                pilaprueba.Push(elementos);
                 
             } while (elementos!=-1);
 
@@ -62,7 +67,7 @@ public class PrincipalMain {
                     case 1:
                     System.out.println("INGRESA UN ELEMENTO A LA PILA");
                     elementos=Integer.parseInt(JOptionPane.showInputDialog("Dijite los elementos de la pila"));
-                    pilaprueba.InsertarElemento(elementos);  
+                    pilaprueba.Push(elementos); 
                         break;
                         case 2:
                         if (!pilaprueba.PilaVacia()) {
@@ -77,32 +82,23 @@ public class PrincipalMain {
                         }
                         break;
                         case 4:
-                        if (pilaprueba.PilaLlena()) {
-                           System.out.println("La pila esta llena "); 
-                        }else{
-                            System.out.println("La pila no tiene datos "); 
-                        }
+                       
+                        
                         break;
                         case 5:
-                        if(pilaprueba.PilaLlena()){
-                         pilaprueba.LimpiarPila(elementos);
-                        }
+                        
                        
                         
                         break;
                         case 6:
-                        if (pilaprueba.PilaLlena()) {
-                           
-                            pilaprueba.ChecarCimapila();
-                            
-                        }
+                        
                         break;
                         case 7:
-                        pilaprueba.TamanioPila();
+                        
                         
                         break;
                         case 8:
-                        pilaprueba.MostrarPila();
+                       
                             
                             break;
                     
@@ -110,16 +106,13 @@ public class PrincipalMain {
                         break;
                 }
             }while(opcion!=9);
-            
-        } catch (Exception e) {
-            //TODO: handle exception
-        }
-
-      
-       
+             
+         } catch (Exception e) {
+             //TODO: handle exception
+         }
+         
+         
         
     }
-    
-
     
 }

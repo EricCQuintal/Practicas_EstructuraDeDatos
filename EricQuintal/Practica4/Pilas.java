@@ -1,7 +1,7 @@
 package EricQuintal.Practica4;
 
 
-
+//nombre de la clase pilas 
 public class Pilas {
     private static final int pruetamanioPila=4;
     private int cimapila;
@@ -29,8 +29,7 @@ public class Pilas {
     }*/
 
     //metodo operacion insertar elemento ala pila Y en caso de estar llena
-    //ocurre un mensaje de desbordamiento de la pila es decir envia
-    //mensaje al usuario que la pila sobrepaso su limite
+    //envia mensaje al usuario que la pila sobrepaso su limite y esta llena.
     public void InsertarElemento(int elemento) 
     {
         if (elemento!=-1) {
@@ -60,7 +59,8 @@ public class Pilas {
         return cimapila==-1;
         
     }
-    //metodo que muestra el contenido de la pila 
+    //metodo que muestra el contenido de la pila y en caso de estar vacia
+    //envia un mensaje al usuario pila vacia . 
     public void MostrarPila() {
         if (PilaVacia()) {
             System.out.println("PILA VACIA");
@@ -94,7 +94,9 @@ public class Pilas {
             
         }*/
 
-        //metodo quitar 
+        //metodo quitar el que me dio dolor de cabeza este metodo tiene como fin 
+        //eliminar el valor de la posicion ultima a entrar hasta quitar todos
+        //los elementos de la pila.
         public void Quitar(int elemento){
             //mostrar el ultimo valor y eleiminarlo
              if(PilaVacia()){
@@ -103,11 +105,16 @@ public class Pilas {
              }
             elemento=listapi[cimapila];
             cimapila--;
-            elemento=listapi.length-1; 
+            elemento=listapi.length-1;
+            System.out.println(); 
             
         }
 
-        //metodo cima de la pila 
+        //metodo cima de la pila este metodo tiene como in enviar un mensaje al 
+        //ususario el cual sera la posicion ultima segun siguiendo las normas 
+        //de la pila es decir el primero en entrar es el ultimo en salir
+        //y el ultimo en entrar es el primero en salir por lo cual enviara 
+        //la posicion ultima en entrar y el valor q cuenta.
         public void ChecarCimapila(){
             if (PilaVacia()) {
                 System.out.println("pila vacia");  
@@ -117,21 +124,25 @@ public class Pilas {
             
 
         }
-        //metodo limpiar pila 
+        //metodo limpiar pila como se pbserva el metodo siguiente limpia la pila es
+        //decir elimina todos los datos almacenados en la pila y envia un mensaje al
+        //final de su ejecucion 
         public void LimpiarPila(int aux){
             if (PilaLlena()) {
                 while (cimapila<=listapi[cimapila]) {
                     aux=listapi[cimapila];
                     cimapila--;
                     aux=listapi.length-3;
-                    System.out.println("SE QUITO ELEMENTO CON EXITO: "+aux); 
+                    System.out.println("LA PILA SE VACIO CORRECTAMENTE"); 
                 }
                
               
               
             }
         }
-        //metodo tamanio pila 
+        //metodo tamanio pila este metodo tiene como fin enviar al ususrio segun 
+        //el tamaño designado por el progrmamador con la variable con el valor del
+        //arreglo el tamaño de la pila es decir el valor del tamaño.
         public int TamanioPila(){
          
             System.out.println("El tamaño de la pila es: "+ pruetamanioPila);
