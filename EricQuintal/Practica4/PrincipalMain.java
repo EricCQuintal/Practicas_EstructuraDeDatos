@@ -3,6 +3,7 @@ package EricQuintal.Practica4;
 
 //se importo las librerias JOptionPane para visusalizar 
 import javax.swing.JOptionPane;
+
 //la calse principal main 
 public class PrincipalMain {
     public static void main(String[] args) {
