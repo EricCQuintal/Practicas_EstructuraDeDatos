@@ -1,4 +1,4 @@
-package EricQuintal.Practica4;
+package EricQuintal.Practica4; 
 
 
 //nombre de la clase pilas 
@@ -127,19 +127,16 @@ public class Pilas {
         //metodo limpiar pila como se pbserva el metodo siguiente limpia la pila es
         //decir elimina todos los datos almacenados en la pila y envia un mensaje al
         //final de su ejecucion 
-        public void LimpiarPila(int aux){
-            if (PilaLlena()) {
-                while (cimapila<=listapi[cimapila]) {
-                    aux=listapi[cimapila];
-                    cimapila--;
-                    aux=listapi.length-3;
-                    System.out.println("LA PILA SE VACIO CORRECTAMENTE"); 
-                }
+        public void LimpiarPila(){
+           while (!PilaVacia()) {
+               Quitar(listapi[cimapila]);
                
+           } 
+           System.out.println("La pila se ha limpiado con exito");
               
               
             }
-        }
+        
         //metodo tamanio pila este metodo tiene como fin enviar al ususrio segun 
         //el tamaño designado por el progrmamador con la variable con el valor del
         //arreglo el tamaño de la pila es decir el valor del tamaño.

@@ -18,8 +18,8 @@ public class PrincipalMain {
             pilaprueba=new Pilas();
             do {
                
-                elementos=Integer.parseInt(JOptionPane.showInputDialog("\nCREAR PILA PROGRAMA\nTECLEA LOS ELEMENTOS DE LA PILA TERMINA OPERACION CON -1\nDijite los elementos de la pila"));
-                pilaprueba.InsertarElemento(elementos);
+elementos=Integer.parseInt(JOptionPane.showInputDialog("\nCREAR PILA PROGRAMA\nTECLEA LOS ELEMENTOS DE LA PILA TERMINA OPERACION CON -1\nDijite los elementos de la pila"));
+pilaprueba.InsertarElemento(elementos);
                 
             } while (elementos!=-1);
 
@@ -86,7 +86,7 @@ public class PrincipalMain {
                         break;
                         case 5:
                         if(pilaprueba.PilaLlena()){
-                         pilaprueba.LimpiarPila(elementos);
+                         pilaprueba.LimpiarPila();
                         }
                        
                         
