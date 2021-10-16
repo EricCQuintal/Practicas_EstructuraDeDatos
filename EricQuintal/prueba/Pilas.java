@@ -1,8 +1,7 @@
 package EricQuintal.prueba;
-
-
 //nombre de la clase pilas 
 public class Pilas {
+    //tamaño de la pila designada por progrmador
     private static final int pruetamanioPila=4;
     private int cimapila;
     private int listapi[];
@@ -40,10 +39,6 @@ public class Pilas {
             listapi[cimapila]=elemento;
             System.out.println("El elemento ingresado es: "+elemento);
         }
-            
-            
-        
-
     }
 
     //metodo de pila llena esta operacion es encargada de realizar el censo de 
@@ -76,16 +71,18 @@ public class Pilas {
         for(int i=listapi.length-1, j=0; i>=0;i--,j++)
         {
             aux[j]=listapi[i];
-            System.out.println("El elemento es: "+aux[j]);
-            
+            System.out.println("El elemento es: "+aux[j]);          
         }
-        
-
         }
                 
             }
        
-       
+       //metodo mostrar este metodo es encargado de realizar por medio de un for 
+       //un censo el cual usa un if para checar si la pila creada esta vacia en 
+       //si esta vacia enviara un mensaje el cual dira pila esta vacia 
+       //si no entrara a un or el cual estara encargado de realizar un censo 
+       //de toda la pila el cual con ayuda de un for escanera toda la pila 
+       //el punto lenght hace referencia al tamño de la pila. 
             public void MostrarPila() {
                 if (PilaVacia()) {
                     System.out.println("PILA VACIA");
@@ -93,15 +90,21 @@ public class Pilas {
                 int aux []=new int[listapi.length]; 
                 for(int i=listapi.length-1, j=0; i>=0;i--,j++)
                 {
+                    //al final este arreglo de tipo objeto creado 
+                    //sera igual a la lista pila que creamos al principio
                     aux[i]=listapi[j];
+                    //este al crear la nueva pila imprimira todos 
+                    //los iteradores de tipo [i]
                     System.out.println("El elemento es: "+aux[i]);
                     
                 }
             }
                 
             }
-
-
+//este metodo es el encargado de eliminar los datos obtneidos por teclado
+//datos repetidos esta operacion es realzada con 2 for y un while los
+//primeros 2 for crean dos listas y mediante el while comparan esta 
+//y en caso de coincidir envia un mensaje de borrar datos repetido
             public void EliminarRepetidos(){
                 int aux []=new int[listapi.length];  
                 for(int i=0;i<aux.length;i++){
@@ -151,10 +154,11 @@ public class Pilas {
         //la posicion ultima en entrar y el valor q cuenta.
         public void ChecarCimapila(){
             if (PilaVacia()) {
-                System.out.println("pila vacia");  
-            }else{
+                System.out.println("PILA ESTA VACIA"); 
+             }else{
                 System.out.println("La cima de la pila es: "+listapi[cimapila]);
             }
+            
             
 
         }
@@ -174,9 +178,10 @@ public class Pilas {
         //metodo tamanio pila este metodo tiene como fin enviar al ususrio segun 
         //el tamaño designado por el progrmamador con la variable con el valor del
         //arreglo el tamaño de la pila es decir el valor del tamaño.
-        public void TamanioPila(){
-         
-            System.out.println("El tamaño de la pila es: "+ listapi.length);
+        public int TamanPila(){
+            System.out.println(pruetamanioPila);
+            return cimapila;
+
             
         }
 

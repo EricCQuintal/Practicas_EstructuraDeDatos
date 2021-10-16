@@ -17,13 +17,20 @@ public class PrincipalMain {
         try {
             pilaprueba=new Pilas();
             do {
-               
+//en este caso la variable elemento realiza la funcion de obtner el valor dado 
+//por el usuario y este es agregado ala pila que hemos creado con un tamaño 
+//prevsto por nosostros              
 elementos=Integer.parseInt(JOptionPane.showInputDialog("\nCREAR PILA PROGRAMA\nTECLEA LOS ELEMENTOS DE LA PILA TERMINA OPERACION CON -1\nDijite los elementos de la pila"));
 pilaprueba.InsertarElemento(elementos);
-                
+              //en este caso el while se encarga de finalizar el do si este 
+              //es diferente mientras sea  -1   
             } while (elementos!=-1);
 
             do{
+                //por medio de JOption pane podemos enviar un mensaje el cual 
+                //no proporcionara un mensaje por pantalla solicitando al usuario
+                //la opcion a reaalizar opcion es la variable ala que se le es 
+                //asignada esa accion       
                 opcion=Integer.parseInt(JOptionPane.showInputDialog(
                 "\n--------------------------------------\n"+
                 "\n                  menu                \n"+
@@ -42,6 +49,8 @@ pilaprueba.InsertarElemento(elementos);
                 "\n--------------------------------------\n"
                 +"\nElige una opcion a ejecutar\n"
 ));
+//este switch es el encargado de realizar las operaciones de cada funcion
+//que es mostrada por medio de pantalla
                 switch (opcion) {
                     case 1:
                     System.out.println(".........................................");
@@ -89,7 +98,7 @@ pilaprueba.InsertarElemento(elementos);
                         break;
                         case 7:
                         System.out.println(".........................................");
-                        pilaprueba.TamanioPila();
+                        pilaprueba.TamanPila();
                         
                         break;
                         case 8:
@@ -114,17 +123,11 @@ pilaprueba.InsertarElemento(elementos);
                     default:
                         break;
                 }
+                //finaliza con la opcion 11
             }while(opcion!=11);
             
         } catch (Exception e) {
             //TODO: handle exception
-        }
-
-      
-       
-        
-    }
-    
-
-    
+        }  
+    }   
 }
