@@ -110,9 +110,9 @@ public class Pilas {
                 for(int i=0;i<aux.length;i++){
                     for(int j=i+1;j<aux.length;j++){
                         while(aux[i]==(aux[j])){
-                            aux[i]=listapi[j];
+                            listapi[i]=listapi[j];
                             j--;
-                            System.out.println("Dato duplicado Removido: "+aux[j]);
+                            System.out.println("Dato duplicado Removido: "+listapi[j]);
                         }
                     }
                 }

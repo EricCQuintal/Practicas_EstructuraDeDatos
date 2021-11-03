@@ -1,10 +1,10 @@
 package EricQuintal.prueba;
-
+//fallando repositorio prueba de sincronizacion 
 
 //se importo las librerias JOptionPane para visusalizar 
 import javax.swing.JOptionPane;
 
-//la calse principal main 
+//la clase principal main 
 public class PrincipalMain {
     public static void main(String[] args) {
         //se crearon variables a usar 
