@@ -7,7 +7,7 @@ public class EstNoLinArbol{
 
 public static void main(String[] args) throws Exception
 { 
-int opc=0, ele;
+int opc=0, elemento;
 String nom;
 
 BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
@@ -18,21 +18,20 @@ Paso2_OpArbol arbol = new Paso2_OpArbol();
         try
         { 
             System.out.println(
-                    "/n--------------------------------------------------/n"
- 
-  
-
-                            +" MENU ARBOLES /n"+
-                            "  1.INSERTAR Modo /n" +
-                            "  RECORRIDOS /n" +
-                            "  2.PreOrden /n" +  
-                            "  3.InOrden /n" +
-                            "  4.PostOrden /n" +
-                            "  5.BUSCAR llodo /n" +
-                            "  6.ELIMINAR Nodo/n" +
-                            "  7.SALIR /n" +
-                            "Elige una opción: Y" +
-                    "/n--------------------------------------------------/n");
+                    "\n--------------------------------------\n"+
+                    "\n            MENU ARBOLES              \n"+
+                    "\n--------------------------------------\n"+
+                            
+                            "  1.Insertar Nodo \n" +
+                            "  RECORRIDOS \n" +
+                            "  2.PreOrden \n" +  
+                            "  3.InOrden \n" +
+                            "  4.PostOrden \n" +
+                            "  5.BUSCAR nodo \n" +
+                            "  6.ELIMINAR Nodo\n" +
+                            "  7.SALIR \n" +
+                            "Elige una opción: \n" +
+                    "\n---------------------------------------\n");
 
 opc = Integer.parseInt(entrada.readLine());
 switch (opc)
@@ -40,11 +39,11 @@ switch (opc)
 
     case 1:
 
-        System.out.println("Inpresa el núnero del nodo: ");
-        ele = Integer.parseInt(entrada.readLine());
-        System.out.println("ingresa la info del nodo:");
+        System.out.println("Ingresa el número del nodo: ");
+        elemento = Integer.parseInt(entrada.readLine());
+        System.out.println("Ingresa la info del nodo:");
         nom = entrada.readLine();
-        arbol.InsertarNodo(ele, nom);
+        arbol.InsertarNodo(elemento, nom);
         break;
     case 2:
 
@@ -72,7 +71,7 @@ switch (opc)
         }
         break;
     case 4:
-            if(arbol.Arbolvacio())
+            if(!arbol.Arbolvacio())
         { 
             System.out.println("Recorrido PostOrden");
             arbol.PostOrden(arbol.raiz);
@@ -87,9 +86,9 @@ switch (opc)
         { 
             System.out .println("Buscando Nodo. . .");
             System.out .println("Ingresa el núnero del nodo a buscar: ");
-            ele = Integer.parseInt(entrada.readLine());
+            elemento = Integer.parseInt(entrada.readLine());
 
-            if(arbol.BuscarNodo(ele)==null)
+            if(arbol.BuscarNodo(elemento)==null)
                 System.out.println("Ese nodo no existe en el árbol");
         else
                 System.out.println("Nodo existente con valor: " + arbol);
@@ -105,9 +104,9 @@ switch (opc)
         { 
             System.out .println("Eliminando Modo. ..");
             System.out.println("Ingresa el núnero del nodo a eliminar: ");
-            ele = Integer.parseInt(entrada.readLine());
+            elemento = Integer.parseInt(entrada.readLine());
 
-            if(arbol.EliminarNodo(ele)==false)
+            if(arbol.EliminarNodo(elemento)==false)
             System.out.println("Ese nodo no existe en el árbol");
     else
             System.out.println("nodo eliminado con éxito");
