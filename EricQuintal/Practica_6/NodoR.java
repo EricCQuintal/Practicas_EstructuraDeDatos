@@ -1,6 +1,6 @@
 package EricQuintal.Practica_6;
 
-public class NodoR {
+public class NodoR { 
     int dato;
     String nombre;
     NodoR hDer, hIsq;
@@ -10,11 +10,11 @@ public class NodoR {
         this.hDer=null;
         this.hIsq=null;
 
-
+        public String toString(){
+            return dato +" --> " + nombre;
+    
+        }
     }
-    public String toString(){
-        return dato +" --> " + nombre;
-        
-    }
+   
 
 }
