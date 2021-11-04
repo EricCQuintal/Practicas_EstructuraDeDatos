@@ -170,7 +170,7 @@ public class Paso2_OpArbol {
             }
             
         }else{
-            NodoR nuevoRemplazo=reemplazar(aux);
+            NodoR nuevoRemplazo=Reemplazar(aux);
             if (aux==raiz) 
             {
                 raiz=nuevoRemplazo;   
@@ -187,30 +187,27 @@ public class Paso2_OpArbol {
 
     }
 
-    private NodoR reemplazar(NodoR aux) {
-        return null;
+    //metodo 8 aun no logro entender que funcion operacion realiza 
+    //segun este se encarga de sustituir por el mayor de los menores 
+
+    private NodoR Reemplazar(NodoR act) {
+        NodoR reemp,reemplazo;
+        reemp=act;
+        reemplazo=act;
+        NodoR aux=act.hDer;
+        while (aux!=null) {
+            reemp=reemplazo;
+            reemplazo=aux;
+            aux=aux.hIsq;
+            
+        }
+        if (reemplazo!=act.hDer) {
+            reemp.hIsq=reemplazo.hDer;
+            reemplazo.hDer=act.hDer;
+            
+        }
+        System.out.println("El nodo a eliminar es sustituiido por: "+reemplazo);
+        return reemplazo;
     }
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-    
-
-
-    
-    
+ 
 }
