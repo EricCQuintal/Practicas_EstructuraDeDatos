@@ -82,7 +82,7 @@ public class Paso2_OpArbol {
             InOrden(raizA.hDer);
         }
     }
-    //metodo 5 este es encargado de hacer un proceso de un algorito el cual 
+    //metodo 5 este es encargado de hacer un proceso de un algoritmo el cual 
     //representa el recorrido PostOrden de un arbol.
     public void PostOrden(NodoR raizA) 
     {
@@ -116,7 +116,82 @@ public class Paso2_OpArbol {
         }
         return aux;   
     }
-    
+    //metodo 7 este metodo fue creado para buscar es decir censa si existe 
+    //un nodo Raiz padre,Nodo Hijo isquierdo y nodo Hijo derecho con el fin
+    //de eliminar el dato que integra la posicion en donde se encuentra 
+    //almacenado el dato
+    public boolean EliminarNodo(int d)
+    {
+        NodoR aux=raiz;
+        NodoR padre=raiz;
+        boolean HijoIsq=true;
+        while (aux.dato!=d) 
+        {
+            padre=aux;
+            if (d<aux.dato) 
+            {
+                HijoIsq=true;
+                aux=aux.hIsq;
+                
+            }else
+            {
+                HijoIsq=false;
+                aux=aux.hDer;
+
+            }
+            if (aux==null) 
+            return false;    
+        }
+
+        if (aux.hIsq==null && aux.hDer==null) 
+        {
+            if (aux==raiz) 
+            {
+                raiz=null;
+                
+            }else if(HijoIsq){
+                padre.hIsq=null;
+            }else
+            {
+                padre.hDer=null;
+            }  
+        }
+        else if (aux.hDer==null) 
+        {
+            if (aux==raiz) 
+            {
+                raiz=aux.hIsq; 
+            }else if (HijoIsq) 
+            {
+                padre.hIsq=aux.hDer;    
+            }else
+            {
+                padre.hDer=aux.hDer;
+            }
+            
+        }else{
+            NodoR nuevoRemplazo=reemplazar(aux);
+            if (aux==raiz) 
+            {
+                raiz=nuevoRemplazo;   
+            }else if(HijoIsq)
+            {
+                padre.hIsq=nuevoRemplazo;
+            }else
+            {
+                padre.hDer=nuevoRemplazo;
+                nuevoRemplazo.hIsq=aux.hIsq;
+            }      
+        }
+        return true;  
+
+    }
+
+    private NodoR reemplazar(NodoR aux) {
+        return null;
+    }
+
+
 
 
 
