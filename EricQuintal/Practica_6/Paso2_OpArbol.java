@@ -31,7 +31,9 @@ public class Paso2_OpArbol {
                     {
                         padre.hIsq=nuevo;
                         return;                        
-                    }else
+                    }
+                    
+                    else
                     {
                         aux=aux.hDer;
                         if (aux==null) 
@@ -55,7 +57,7 @@ public class Paso2_OpArbol {
     //metdo 3 este es encargado de imprimir lo que se encuentra en el primer nodo
     public void Visitar(NodoR raizA)
     {
-        System.out.println(raizA.dato +",");
+        System.out.print(raizA.dato +",");
 
     }
     
