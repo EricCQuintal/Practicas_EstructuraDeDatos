@@ -10,7 +10,7 @@ public class PrincipalMain {
 
         for(int i=0; i<arreglo.length;i++)
         {
-            System.out.println(arreglo[i]);
+            System.out.println(arreglo[i]);  
         }
 
 
