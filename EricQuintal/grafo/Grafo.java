@@ -19,7 +19,7 @@ public class Grafo {
 	
 	//Crea un grafo de 5 vertices
 	public Grafo(){
-		this(5);
+		this(6);
 	}
 	
 	public void insertarArista(int v1, int v2, int pesoArista) 
