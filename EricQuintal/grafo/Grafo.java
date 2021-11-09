@@ -2,13 +2,13 @@ package EricQuintal.grafo;
 
 public class Grafo {
     private final int NUM_VERTICES;
-	private int grafo[][];
+	public int [][] grafo;
 	
 	//Crea un grafo de numVertices
 	//La matriz de adyacencia es inicializada con ceros.
 	public Grafo(int numVertices){
 		this.NUM_VERTICES = numVertices;
-		grafo = new int[NUM_VERTICES][NUM_VERTICES];
+		grafo = new int [NUM_VERTICES][NUM_VERTICES];
 		
 		for (int i = 0; i < grafo.length; i++) {
 			for (int j = 0; j < grafo[i].length; j++) {

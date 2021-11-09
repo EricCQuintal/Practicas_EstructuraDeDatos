@@ -62,6 +62,7 @@ public int numVertice(String vs)
         return matAd[va][vb] == 1;
         }
 
+
         public void mostrarMat()
         { 
         int i,j;
@@ -70,10 +71,14 @@ public int numVertice(String vs)
             for (j=0; j<numVerts; j++)
             {
                  System.out.print("[" + matAd[i][j]+"] ");
-                }
+            }
             System.out.println("");
         } 
-    }
+        }
+       
+
+
+
 }
 
 

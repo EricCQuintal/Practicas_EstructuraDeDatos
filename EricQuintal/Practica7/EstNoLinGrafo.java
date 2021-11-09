@@ -1,16 +1,33 @@
 package EricQuintal.Practica7;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
+import EricQuintal.grafo.*;
 
 public class EstNoLinGrafo 
 {
+    public static void addArista(Grafo g){
+        System.out.println("Opcion 4 Agregar arista con peso ");
+		Scanner in = new Scanner(System.in);
+		System.out.println("Ingrese v1 y v2");
+		int v1 = in.nextInt();
+		int v2 = in.nextInt();
+		System.out.println("Ingrese el peso de la arista");
+		int pesoArista = in.nextInt();
+		g.insertarArista(v1, v2, pesoArista);
+	}
+    public static void showGraph(Grafo g){
+		g.imprimirGrafo();
+	}
     public static void main(String[] args) throws Exception
     { 
         int opc=0;
         String nom, va, vb;
+        
 
         BufferedReader entrada = new BufferedReader(new InputStreamReader (System. in));
        GrafoMatriz grafo = new GrafoMatriz();
+       Grafo g = new Grafo();
         do
         { 
            try
@@ -21,7 +38,10 @@ public class EstNoLinGrafo
                              "1. INSERTAR un Vértice \n" +
                              "2. ARISTA (CREAR Arco) \n" +
                              "3. MOSTRAR matriz de adyacencia \n" +
-                             "4. Salir \n\n" +
+                             "4. Agregar Datos Matriz Pesos \n"+
+                             "5. Mostrar Matriz pesos\n" +
+                             "6.camino minimo"+
+                             "7. Salir \n\n"+
                              "Elige una opción: \n" +
                 "------------------------------------------- \n");
 
@@ -41,12 +61,24 @@ public class EstNoLinGrafo
                           System.out.println("Ingresa el 2° vertice: ");
                           vb = entrada.readLine();
                           grafo.nuevoArco(va, vb);
+
                           break;
                       case 3:
                         grafo.mostrarMat();
                         break;
 
                       case 4:
+                        addArista(g);
+                     
+                        break;
+
+                        case 5:
+                        showGraph(g);
+                        break;
+                        case 6:
+                        System.out.println("FIN");
+                        break;
+                        case 7:
                         System.out.println("FIN");
                         break;
 
@@ -58,6 +90,6 @@ public class EstNoLinGrafo
             {
                 throw new Exception("Error" + n.getMessage());
                 }
-            }while(opc!=4);
+            }while(opc!=7);
         }
     }
