@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import EricQuintal.grafo.*;
+import EricQuintal.Practica7Prueba.CaminosMinimos;
+
 
 public class EstNoLinGrafo 
 {
@@ -19,6 +21,22 @@ public class EstNoLinGrafo
     public static void showGraph(Grafo g){
 		g.imprimirGrafo();
 	}
+
+    public static void CaminoMinimo(){
+         // TODO code application logic here
+         Scanner teclado=new Scanner(System.in);
+         long matrizA[][]=new long[5][5];
+         for(long i=0;i<matrizA.length;i++){
+             for(long j=0;j<matrizA.length;j++){
+                 System.out.println("Ingresa valores de una matriz de pesos 5X5: ");
+                 matrizA[(int) i][(int) j]=teclado.nextLong();
+             }
+         }
+         CaminosMinimos ruta= new CaminosMinimos();
+          System.out.println(ruta.algoritmoFloyd(matrizA));
+     
+     }
+    
     public static void main(String[] args) throws Exception
     { 
         int opc=0;
@@ -40,7 +58,7 @@ public class EstNoLinGrafo
                              "3. MOSTRAR matriz de adyacencia \n" +
                              "4. Agregar Datos Matriz Pesos \n"+
                              "5. Mostrar Matriz pesos\n" +
-                             "6.camino minimo"+
+                             "6.camino minimo\n"+
                              "7. Salir \n\n"+
                              "Elige una opción: \n" +
                 "------------------------------------------- \n");
@@ -76,7 +94,7 @@ public class EstNoLinGrafo
                         showGraph(g);
                         break;
                         case 6:
-                        System.out.println("FIN");
+                        CaminoMinimo();
                         break;
                         case 7:
                         System.out.println("FIN");
