@@ -1,9 +1,8 @@
 package EricQuintal.Practica7Prueba;
 
 public class CaminosMinimos {
-    // metodo para derminar xaminos segun el algoritmo de floyd
     public String algoritmoFloyd(long[][] mAdy) {
-
+         //variables declaradas 
         int vertices = mAdy.length;
         long matrizAdyacencia[][] = mAdy;
         String caminos[][] = new String[vertices][vertices];
@@ -11,8 +10,8 @@ public class CaminosMinimos {
         String caminoRecorrido = "", cadena = "", caminitos = "";
         int i, j, k;
         float temporal1, temporal2, temporal3, temporal4, minimo;
+      
         // inicializar matrices y caminos
-
         for (i = 0; i < vertices; i++) {
             for (j = 0; j < vertices; j++) {
                 caminos[i][j] = "";
@@ -37,7 +36,8 @@ public class CaminosMinimos {
                         {
                             caminoRecorrido = "";
                             caminosAuxiliares[i][j] = k + "";
-                            caminos[i][j] = caminosR(i, k, caminosAuxiliares, caminoRecorrido) + (k + 1);
+                            caminos[i][j] = caminosR(i, k, caminosAuxiliares, caminoRecorrido) +
+                             (k + 1);
 
                         }
                     }
@@ -45,7 +45,8 @@ public class CaminosMinimos {
                 }
             }
         }
-        // agregando el camino a cadeba
+       
+        // agregando el camino a cadena
         for (i = 0; i < vertices; i++) 
         {
             for (j = 0; j < vertices; j++) 
@@ -64,11 +65,12 @@ public class CaminosMinimos {
                     {
                         if (caminos[i][j].equals("")) 
                         {
-                            caminitos += "de (" + (i + 1) + "---->" + (j + 1) + ") irse por...(" + (i + 1) + ", "
+                            caminitos += "de (" + (i + 1) + "---->" + (j + 1) + ") irse por...(" + 
+                            (i + 1) + ", "
                                     + (j + 1) + ")\n";
                         } else {
-                            caminitos += "de (" + (i + 1) + "---->" + (j + 1) + ") irse por...(" + (i + 1) + ", "
-                                    + caminos[i][j] + ", " + (j + 1) + ")\n";
+                            caminitos += "de (" + (i + 1) + "---->" + (j + 1) + ") irse por...(" +
+                             (i + 1) + ", "+ caminos[i][j] + ", " + (j + 1) + ")\n";
                         }
                     }
                 }
@@ -86,8 +88,9 @@ public class CaminosMinimos {
             return "";
         } else 
         {
-            caminoRecorrido += caminosR(i, Integer.parseInt(caminosAuxiliares[i][k].toString()), caminosAuxiliares,
-                    caminoRecorrido) + (Integer.parseInt(caminosAuxiliares[i][k].toString()) + 1) + ", ";
+            caminoRecorrido += caminosR(i, Integer.parseInt(caminosAuxiliares[i][k].toString()), 
+            caminosAuxiliares,caminoRecorrido) + (Integer.parseInt(caminosAuxiliares[i][k].toString())
+            + 1) + ", ";
             return caminoRecorrido;
         }
     }

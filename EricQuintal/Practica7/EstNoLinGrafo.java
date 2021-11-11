@@ -1,13 +1,20 @@
 package EricQuintal.Practica7;
+//se importaron librerias
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+//se importaron las clases ya que al ponerlas en otras carpetas solo pase a importarlas 
+//para que realicen las funciones 
 import EricQuintal.grafo.*;
 import EricQuintal.Practica7Prueba.CaminosMinimos;
 
 
 public class EstNoLinGrafo 
 {
+    //Este es una metodo el cual tiene como funcion agregra la arista esto en el caso de la calse de
+    //de la matriz de pesos la cual tiene un peso y la operacion o metodo de la calse grafo obtiene 
+    //los datos proporcionados por el susuario y los asigna alas varaibles que corresponden ala 
+    //ala clase este le pide al usuario que ingrese ambas verctices y el peso de la arista.  
     public static void addArista(Grafo g){
         System.out.println("Opcion 4 Agregar arista con peso ");
 		Scanner in = new Scanner(System.in);
@@ -18,10 +25,15 @@ public class EstNoLinGrafo
 		int pesoArista = in.nextInt();
 		g.insertarArista(v1, v2, pesoArista);
 	}
+    //este metodo practicamente ya obtenidos los datos por teclado pasa a recibir los datos y  
+    //asignarlos al la variable g y esta recibe o hace la iperacion de imprimir grafo
     public static void showGraph(Grafo g){
 		g.imprimirGrafo();
 	}
-
+    //este recibe los parametros de una matriz proporcionadas por el usuario por medio del 
+    //teclado estos parametros se asignan dependeineo de la posicion en la que esten 
+    //tengo delclarado una matriz de 5X5 pero esto quiere decir que recibe una matriz de 
+    //5X5
     public static void CaminoMinimo(){
          // TODO code application logic here
          Scanner teclado=new Scanner(System.in);
@@ -62,8 +74,6 @@ public class EstNoLinGrafo
                              "7. Salir \n\n"+
                              "Elige una opción: \n" +
                 "------------------------------------------- \n");
-
-
 
                   opc = Integer.parseInt(entrada.readLine());
                   switch (opc)
