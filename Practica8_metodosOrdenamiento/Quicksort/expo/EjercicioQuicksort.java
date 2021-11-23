@@ -1,4 +1,4 @@
-package EricQuintal.expo;
+package Practica8_metodosOrdenamiento.Quicksort.expo;
 
 public class EjercicioQuicksort 
 {
