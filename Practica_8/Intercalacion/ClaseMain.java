@@ -42,16 +42,16 @@ public class ClaseMain {
 		
 		MetodoOrdenamientoIntercalacion ordenIntercalacion= new MetodoOrdenamientoIntercalacion();
 		
-        System.out.println("Arreglo vector 1 original");
-        ordenIntercalacion.mostrarArreglo(arregloN1);
-        System.out.println("Arreglo vector 2 original");
-        ordenIntercalacion.mostrarArreglo(arregloN2);
-        ordenIntercalacion.burbuja1(arregloN1);
-        ordenIntercalacion.burbuja1(arregloN2);
-        System.out.println("Arreglo vector 1 ordenado");
-        ordenIntercalacion.mostrarArreglo(arregloN1);
-        System.out.println("Arreglo vector 2 ordenado");
-        ordenIntercalacion.mostrarArreglo(arregloN2);
-        ordenIntercalacion.intercalacion(arregloN1, arregloN2);
+        System.out.println("Datos del primer arreglo Ingresado por teclado");
+        ordenIntercalacion.MostrarArreglo(arregloN1);
+        System.out.println("Datos del segundo arreglo Ingreado por tecaldo");
+        ordenIntercalacion.MostrarArreglo(arregloN2);
+        ordenIntercalacion.OrdenaArreB(arregloN1);
+        ordenIntercalacion.OrdenaArreB(arregloN2);
+        System.out.println("Datos Arreglo 1 ordenados");
+        ordenIntercalacion.MostrarArreglo(arregloN1);
+        System.out.println("Datos Arreglo 2 ordenados");
+        ordenIntercalacion.MostrarArreglo(arregloN2);
+        ordenIntercalacion.IntercalarArreglos(arregloN1, arregloN2);
 	}	
 }
