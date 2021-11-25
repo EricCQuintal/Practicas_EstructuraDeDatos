@@ -1,7 +1,11 @@
-package Practica8_metodosOrdenamiento.Radix;
+package Practica_8.Radix;
+
+//Editar que se pueden ingresar los valores por teclado
+//Editar que no se vea igual
+//Jopcion pane
 
 public class Radix {
-    
+
         public void ordenarRadix(int [] arregloNum){
             int x, i, j;
     
@@ -46,6 +50,4 @@ public class Radix {
                 System.err.print("[" + arregloNum[k] + "] ");
             }
         }
-    
-    
-}
+    }

@@ -1,8 +1,12 @@
-package Practica8_metodosOrdenamiento.NoDirecta;
+package Practica_8.Mezcla_Directa;
 
-public class MetodosNodirecta {
+public class Mezcla_Directa {
+
+	//Editar que se pueden ingresar los valores por teclado
+	//Editar que no se vea igual
+
     int i,j,temporal;
-	public MetodosNodirecta() {
+	public Mezcla_Directa() {
 		this.i=0;
 		this.j=0;
 		this.temporal=0;
@@ -103,5 +107,4 @@ public class MetodosNodirecta {
 		}
 		return contador;
 	}
-    
 }

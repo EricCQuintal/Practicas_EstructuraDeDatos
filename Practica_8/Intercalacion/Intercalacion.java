@@ -1,7 +1,13 @@
-package Practica8_metodosOrdenamiento.Intercalacion;
+package Practica_8.Intercalacion;
 
-public class Intercalacion {
-    int i,j,temporal;
+    import java.util.Arrays;
+
+	//Editar que se pueden ingresar los valores por teclado
+	//editar que no se vea igual 
+
+    public class Intercalacion {
+
+	int i,j,temporal;
 	public Intercalacion() {
 		this.i=0;
 		this.j=0;
@@ -70,5 +76,4 @@ public class Intercalacion {
 		System.out.println("Sin elementos repetidos");
 		mostrarArreglo(aux);
 	}
-    
 }

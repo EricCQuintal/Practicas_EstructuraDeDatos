@@ -1,6 +1,6 @@
-package Practica8_metodosOrdenamiento.Intercalacion;
+package Practica_8.Intercalacion;
 
-public class ClasePrincipal {
+public class IntercalacionMain {
     public static void main(String[] args) {
 		Intercalacion Ordenar= new Intercalacion();
 		int vector1[]= {5,6,3,44,22,1};
@@ -16,5 +16,5 @@ Ordenar.mostrarArreglo(vector1);
 System.out.println("Arreglo vector 2 ordenado");
 Ordenar.mostrarArreglo(vector2);
 Ordenar.intercalacion(vector1, vector2);
-	} 
+	}	
 }

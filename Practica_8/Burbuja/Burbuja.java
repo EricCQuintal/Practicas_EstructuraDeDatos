@@ -1,4 +1,8 @@
-package Practica8_metodosOrdenamiento.Burbuja;
+package Practica_8.Burbuja;
+
+//Editar que se pueden ingresar los valores por teclado y falta de menu
+//Editar que no se vea igual
+
 public class Burbuja {
 	//Atributos
 	int i, j, temporal, intercambios, comparaciones;
