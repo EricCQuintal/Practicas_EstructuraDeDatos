@@ -12,30 +12,29 @@ public class MezclaMain {
         int nElementos;
         nElementos=Integer.parseInt(JOptionPane.showInputDialog("Dijite la cantidad de elementos del arreglo: "));
 
-        int [] vector2=new int [nElementos];
+        int [] arregloN2=new int [nElementos];
 
         System.out.println("Digite los elementos del arreglo: ");
 
         for (int i=0; i<nElementos; i++) 
         {
             System.out.print((i+1)+".Ingrese un numero: ");
-            vector2[i]=sc.nextInt();
+            arregloN2 [i]=sc.nextInt();
 
         } 
 		
-		Mezcla_Directa Ordenar= new Mezcla_Directa ();
-		
+		Mezcla_Directa ordenamientodirecto= new Mezcla_Directa ();
 		System.out.println("Vector 2 original");
-		Ordenar.mostrarArreglo(vector2);
+		ordenamientodirecto.mostrarArreglo(arregloN2);
 		System.out.println("Vector 2 ordenado");
-		vector2= Ordenar.mezclaDirecta(vector2);
+		arregloN2= ordenamientodirecto.mezclaDirecta(arregloN2);
 		System.out.println("Ascendente");
-		Ordenar.mostrarArreglo(vector2);
+		ordenamientodirecto.mostrarArreglo(arregloN2);
 		System.out.println("Descendente");
-		Ordenar.mostrarArreglo2(vector2);
+		ordenamientodirecto.mostrarArreglo2(arregloN2);
 		System.out.println("Numero de elementos repetidos");
-		System.out.println(Ordenar.numRepetidos(vector2));
+		System.out.println(ordenamientodirecto.numRepetidos(arregloN2));
 		System.out.println("Elementos que se repiten"); 
-		Ordenar.mostrarElementRepe(vector2);
+		ordenamientodirecto.mostrarElementRepe(arregloN2);
 	}	
 }
