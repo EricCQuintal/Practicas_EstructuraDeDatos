@@ -11,14 +11,14 @@ public class IntercalacionMain {
         int nElementos;
         nElementos=Integer.parseInt(JOptionPane.showInputDialog("Dijite la cantidad de elementos del arreglo: "));
 
-        int [] vector1=new int [nElementos];
+        int [] arregloN1=new int [nElementos];
 
         System.out.println("Digite los elementos del arreglo: ");
 
         for (int i=0; i<nElementos; i++) 
         {
             System.out.print((i+1)+".Ingrese un numero: ");
-            vector1[i]=sc.nextInt();
+            arregloN1[i]=sc.nextInt();
 
         } 
 
@@ -27,31 +27,31 @@ public class IntercalacionMain {
         int nElementos2;
         nElementos2=Integer.parseInt(JOptionPane.showInputDialog("Dijite la cantidad de elementos del arreglo: "));
 
-        int [] vector2=new int [nElementos2];
+        int [] arregloN2=new int [nElementos2];
 
         System.out.println("Digite los elementos del arreglo: ");
 
         for (int i=0; i<nElementos2; i++) 
         {
             System.out.print((i+1)+".Ingrese un numero: ");
-            vector2[i]=teclado.nextInt();
+            arregloN2[i]=teclado.nextInt();
 
         } 
 
 		
 		
-		Intercalacion Ordenar= new Intercalacion();
+		Intercalacion ordenIntercalacion= new Intercalacion();
 		
-		System.out.println("Arreglo vector 1 original");
-Ordenar.mostrarArreglo(vector1);
-System.out.println("Arreglo vector 2 original");
-Ordenar.mostrarArreglo(vector2);
-Ordenar.burbuja1(vector1);
-Ordenar.burbuja1(vector2);
-System.out.println("Arreglo vector 1 ordenado");
-Ordenar.mostrarArreglo(vector1);
-System.out.println("Arreglo vector 2 ordenado");
-Ordenar.mostrarArreglo(vector2);
-Ordenar.intercalacion(vector1, vector2);
+        System.out.println("Arreglo vector 1 original");
+        ordenIntercalacion.mostrarArreglo(arregloN1);
+        System.out.println("Arreglo vector 2 original");
+        ordenIntercalacion.mostrarArreglo(arregloN2);
+        ordenIntercalacion.burbuja1(arregloN1);
+        ordenIntercalacion.burbuja1(arregloN2);
+        System.out.println("Arreglo vector 1 ordenado");
+        ordenIntercalacion.mostrarArreglo(arregloN1);
+        System.out.println("Arreglo vector 2 ordenado");
+        ordenIntercalacion.mostrarArreglo(arregloN2);
+        ordenIntercalacion.intercalacion(arregloN1, arregloN2);
 	}	
 }
