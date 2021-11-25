@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class IntercalacionMain {
+public class ClaseMain {
     public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
         //se paso a implementar los siguientes atributos
@@ -40,7 +40,7 @@ public class IntercalacionMain {
 
 		
 		
-		Intercalacion ordenIntercalacion= new Intercalacion();
+		MetodoOrdenamientoIntercalacion ordenIntercalacion= new MetodoOrdenamientoIntercalacion();
 		
         System.out.println("Arreglo vector 1 original");
         ordenIntercalacion.mostrarArreglo(arregloN1);

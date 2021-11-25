@@ -1,26 +1,24 @@
 package Practica_8.Intercalacion;
 
-    import java.util.Arrays;
+    public class MetodoOrdenamientoIntercalacion {
 
-	//Editar que se pueden ingresar los valores por teclado
-	//editar que no se vea igual 
+	int a,b,aux;
 
-    public class Intercalacion {
-
-	int i,j,temporal;
-	public Intercalacion() {
-		this.i=0;
-		this.j=0;
-		this.temporal=0;
+	//constructor de metdodo por intercalacion
+	public MetodoOrdenamientoIntercalacion() 
+	{
+		this.a=0;
+		this.b=0;
+		this.aux=0;
 	}
-	//metodo burbuja
+	//metodo burbuja se usa para el ordenamiento previo del arreglo
 	public void burbuja1(int []arreglo) {
-		for(i=0;i<arreglo.length;i++) {
-			for(j=i+1;j<arreglo.length;j++) {
-				if(arreglo[i]>arreglo[j]) {
-					temporal=arreglo[i];
-					arreglo[i]=arreglo[j];
-					arreglo[j]= temporal;
+		for(a=0;a<arreglo.length;a++) {
+			for(b=a+1;b<arreglo.length;b++) {
+				if(arreglo[a]>arreglo[a]) {
+					aux=arreglo[a];
+					arreglo[a]=arreglo[b];
+					arreglo[b]= aux;
 				}
 			}
 		}
