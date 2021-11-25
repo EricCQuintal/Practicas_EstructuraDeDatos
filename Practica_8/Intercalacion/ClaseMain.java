@@ -41,17 +41,21 @@ public class ClaseMain {
 		
 		
 		MetodoOrdenamientoIntercalacion ordenIntercalacion= new MetodoOrdenamientoIntercalacion();
-		
+		System.out.println("....................................................\n");
         System.out.println("Datos del primer arreglo Ingresado por teclado");
         ordenIntercalacion.MostrarArreglo(arregloN1);
-        System.out.println("Datos del segundo arreglo Ingreado por tecaldo");
+        System.out.println("....................................................");
+        System.out.println("Datos del segundo arreglo Ingreado por teclado");
         ordenIntercalacion.MostrarArreglo(arregloN2);
         ordenIntercalacion.OrdenaArreB(arregloN1);
         ordenIntercalacion.OrdenaArreB(arregloN2);
+        System.out.println("....................................................");
         System.out.println("Datos Arreglo 1 ordenados");
         ordenIntercalacion.MostrarArreglo(arregloN1);
+        System.out.println("....................................................");
         System.out.println("Datos Arreglo 2 ordenados");
         ordenIntercalacion.MostrarArreglo(arregloN2);
+        System.out.println("....................................................");
         ordenIntercalacion.IntercalarArreglos(arregloN1, arregloN2);
 	}	
 }
