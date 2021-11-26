@@ -1,21 +1,24 @@
 package Practica_8.Intercalacion;
-
+//se procede a crear la clase la cual estantra como nombre 
+//MetodoOrdenamientoIntercalacion
     public class MetodoOrdenamientoIntercalacion {
-
+//se aginan las siguientes variables 
 	int a,b,auxiliar;
 
 	//constructor de metdodo por intercalacion
 	public MetodoOrdenamientoIntercalacion() 
-	{
+	{ 
+		//inicializan los variables  en 0
 		this.a=0;
 		this.b=0;
 		this.auxiliar=0;
 	}
 	//metodo burbuja se usa para el ordenamiento previo del arreglo
-	//metodo burbuja
+	//metodo burbuja este obtine los valores del arreglo que 
+	//nosostros mandamos a pedir al usuario
 	public void OrdenaArreB(int []arreglo) 
 	{
-
+        
 		for(a=0;a<arreglo.length;a++) 
 		{
 			for(b=a+1;b<arreglo.length;b++) 
@@ -42,8 +45,9 @@ package Practica_8.Intercalacion;
 	//dependiendo se acomodaria en a posicion que le corresponde
 	public void IntercalarArreglos(int[] array1, int[]array2) {
 		int a,b,c;
-		
+		//se asigna el valor del arreglo 1 mas el rreglo 2 al arreglo 3
 		int array3[]= new int [array1.length+array2.length];
+		//dentro del for se procede a realizar las comparaciones 
 		for(a=b=c=0;a<array1.length && b<array2.length;c++) {
 			if(array1[a]< array2[b]) {
 				array3[c]= array1[a];
@@ -57,6 +61,7 @@ package Practica_8.Intercalacion;
 		for(;a<array1.length;a++,c++) {
 			array3[c]=array1[a];
 		}
+		//for inicia el arreglo donde termino anterior arreglo
 		for(;b<array2.length;b++,c++) {
 			array3[c]=array2[b];
 		}
