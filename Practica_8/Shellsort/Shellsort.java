@@ -1,52 +1,61 @@
 package Practica_8.Shellsort;
 
-//Editar que se pueden ingresar los valores por teclado
-//Editar que no se vea igual
-//Arreglo de 20 numeros 
 
-import java.io.BufferedReader;
+//Se impprtaron las siguinetes librerias 
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Shellsort {
     public static void main(String[] args) throws IOException {
-        BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-        int[] vec = new int[20];
-        int val, c = 0;
+        //se encarga de hacer q solicite el usuario los datos de entrada por teclado
+       Scanner sc=new Scanner(System.in);
+       //se asigna el tamaño del arreglo que es 10
+        int[] array = new int[10];
+        int valor, d = 0;
         
-        // Llenar el arreglo
+        // se llena el arreglo con un rango determindao de 20 a 100 
         do {    
-            System.out.print("Ingresa valores positivos en el rango [1 a 100]: ");
-            val = Integer.parseInt(entrada.readLine());
-            if(val > 0 && val < 20){
-                vec[c] = val;
-                c++;
+            System.out.print("Ingresa valores positivos en el rango [20 a 100]: ");
+            valor = sc.nextInt();
+            //aqui se condiciona el rango a aceptar en este caso apartir del numero 20
+            //se podra aceptar los valores y con limite menor a 100
+            if(valor > 20 && valor < 100){
+                array[d] = valor;
+                d++;
+                //si o estan esos datos en el rago solicitados enviara este mensaje
             } else {
-                System.out.println("Ingrese numeros del rango");
+                System.out.println("El numero no esta en el rango");
             }
-        } while (c < vec.length);
+        } while (d < array.length);
         
-        // Metodo Shell Sort
-        int n = vec.length;
+        // Este es el metdodo encargadpo de realizar el ordenamiento
+        int n = array.length;
         int inc = n;
         do {
             inc = inc/2;
             for (int a = 0; a < inc; a++) {
-                for (int i = inc + a; i < n; i+=inc) {
+                for (int i = inc + a; i < n; i+=inc) 
+                {
                     int j = i;
-                    while (j - inc >= 0 && vec[j] <vec[j-inc]) {                        
-                        int aux = vec[j];
-                        vec[j] = vec[j-inc];
-                        vec[j - inc] = aux;
+                    while (j - inc <= 0 && array[j] <array[j-inc]) 
+                    {                        
+                        int aux = array[j];
+                        array[j] = array[j-inc];
+                        array [j - inc] = aux;
                         j -= inc;
                     }
                 }
             }
         } while (inc > 1);
         
-        // Imprime arreglo
-        for (int i = 0; i < vec.length; i++) {
-            System.out.print(vec[i]+", ");
+        // El for que se incicializa en 0 con iterativo i es igual a los avlores ordenados 
+        //del arreglo a imprimir
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+", ");
         }
+    
+           
+        
+    
     }
 }
