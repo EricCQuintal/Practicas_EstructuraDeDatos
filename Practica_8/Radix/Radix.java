@@ -39,10 +39,10 @@ public class Radix {
                 arregloNum = auxiliar;
             }
             System.out.println("Ordenamiento ordenado por radix");
-            mostrarArreglo(arregloNum);
+            mostrarArregloRadix(arregloNum);
         }
     
-        public void mostrarArreglo(int[] arregloNum) {
+        public void mostrarArregloRadix(int[] arregloNum) {
             
             int k; 
             for (k =0; k < arregloNum.length; k++){

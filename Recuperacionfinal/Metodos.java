@@ -1,10 +1,82 @@
-package Estudiar;
+package Recuperacionfinal;
 
-public class Mezcla_Natural {
+public class Metodos {
 
-	public Mezcla_Natural(){
+    //variables generales
+    int i = 0;
+    int k = 0;
+    int numAlumnos;
+    int[] matriculas;
+    String[] materias;
+    String[] alumnos;
+    double[] calificaciones;
+    double[] cali1, cali2, cali3;
+    
+    //constructor
+    public Metodos(int numAlumnos) {
+        this.numAlumnos = numAlumnos;
+        matriculas = new int[numAlumnos];
+        alumnos = new String[numAlumnos];
+        calificaciones = new double[numAlumnos];
+        cali1 = new double[numAlumnos];
+        cali2 = new double[numAlumnos];
+        cali3 = new double[numAlumnos];
+        materias = new String[4];
     }
 
+    public void AgregarAlumnos(int matricula, String alumno, double cal1, double cal2, double cal3) {
+        matriculas[i] = matricula;
+        alumnos[i] = alumno;
+        cali1[i] = cal1;
+        cali2[i] = cal2;
+        cali3[i] = cal3;
+        i++;
+    }
+
+//metdos de busqueda por metodo binario
+    public static int buscar( int [] arreglo, int dato){
+        int inicio = 0;
+        int fin = arreglo. length -1;
+        int pos;
+        while (inicio <= fin){
+            pos = (inicio+fin)/2;
+            if (arreglo[pos]==dato)
+            return pos;
+            else  if (arreglo [pos] <dato ){
+                inicio = pos + 1;
+            } else{
+                fin = pos-1;
+            }
+        }
+        return -1;
+    }
+
+public static void burbuja (int[]arreglo){
+    int temporal = 0;
+    for (int i=0;i<arreglo.length;i++){
+        for(int j=i+1;j<arreglo.length;j++){
+            if (arreglo [i]>arreglo[j]){
+                temporal = arreglo[i];
+                arreglo[i]=arreglo[j];
+                arreglo[j]=temporal;
+
+            }
+        }
+    }
+}
+public static void mostrarArregloBinario (int[]arreglo){
+    int k;
+    for(k=0;k<arreglo.length;k++){
+        System.out.println("[" + arreglo[k]+"]");
+    }
+    System.out.println("");
+    }
+    
+   
+   
+    //metodos mezcla natural
+    
+    
     public int[] mezclaDirecta(int[] arreglo){
 
         int i;
@@ -167,10 +239,61 @@ public class Mezcla_Natural {
     
       public void mostrarArregloNatural(int[] arreglo) {
         int k;
-        for (k=0; k>arreglo.length; k++) {
+        for (k=0; k<arreglo.length; k++) {
             System.out.print("[" + arreglo[k] + "] ");
         }
         System.out.println();
     }
   
+
+
+
+    //metodos de ordenamiento por tecnica radix 
+
+    public void ordenarRadix(int [] arregloNum){
+        int x, i, j;
+
+        for(x=Integer.SIZE-1; x>=0; x--){
+
+            int auxiliar[] = new int [arregloNum.length];
+
+            j = 0;
+
+            for (i=0; i<arregloNum.length; i++){
+
+                boolean mover = arregloNum[i] << x >=0;
+
+                if(x == 0 ? !mover: mover){
+
+                    auxiliar[j] = arregloNum[i];
+                    j++;
+
+                } else {
+
+                    arregloNum[i-j] = arregloNum[i];
+
+                }
+            }
+
+            for (i=j; i < auxiliar.length; i++ ){
+
+                auxiliar[i] = arregloNum[i-j];
+
+            }
+            arregloNum = auxiliar;
+        }
+        System.out.println("Ordenamiento ordenado por radix");
+        mostrarArregloRadix(arregloNum);
+    }
+
+    public void mostrarArregloRadix(int[] arregloNum) {
+        
+        int k; 
+        for (k =0; k < arregloNum.length; k++){
+            
+            System.err.print("[" + arregloNum[k] + "] ");
+        }
+    }
+
+    
 }

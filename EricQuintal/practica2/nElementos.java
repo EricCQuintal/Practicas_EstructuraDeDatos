@@ -49,11 +49,11 @@ public class nElementos {
         System.out.println("............................................. ");
         for (int i=0; i<nElementos; i++){
            suma +=numeros[i];
-           
+          
             
         }
         //este es un mensaje que nos proporcionara el valor de la suma
-        System.out.println("La suma de los elementos es: "+suma);
+        System.out.println("La suma de los elementos es: "+suma/numeros.length);
 
         
 

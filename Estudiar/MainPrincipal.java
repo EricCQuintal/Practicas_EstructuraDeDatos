@@ -24,36 +24,61 @@ public static void main(String[] args) {
     nombresalumnos[k]=sc.nextLine(); 
     
    
-    System.out.println("Ingrese las Calificaciones finales de los alumnos");
+    
+    
+     System.out.println("Ingrese las Calificaciones finales de los alumnos");
     //se crea un array llamado notas de numAlumn elementos de tipo double
     double[] notas = new double[cantidadalumnos]; 
     
     // Entrada de datos. Se lee la nota de cada alummo y se guarda
     // en cada elemento del array
+for(int l=0; l<cantidadalumnos; l++)
+{
+    System.out.println("Asigantura "+" " + (l + 1) );
+    for (i = 0; i < notas.length; i++) 
+    {
+        System.out.print("Alumno " + (i + 1) + " Nota final: ");
+        notas[i] = sc.nextDouble();  
+       
+    }
+
+     // Sumar todas las notas
+     //for (i = 0; i < notas.length; i++) 
+    // {
+       // suma = suma+notas[i];
+        // Calcular la media
+       
+    // }
+    // media = suma ;
+
+     // Mostrar la media
+    // System.out.printf("Nota media del curso asignatura : %.2f %n", media);
+
+     
+
+}
+    
+    
 
     
-        for (i = 0; i < notas.length; i++) {
         
-            System.out.print("Alumno " + (i + 1) + " Nota final: ");
-            notas[i] = sc.nextDouble();
-        }
 
-         // Sumar todas las notas
-         for (i = 0; i < notas.length; i++) {
-            suma = suma + notas[i];
-        }
+       // Sumar todas las notas
+          //for (i = 0; i < notas.length; i++) {
+             //suma = suma + notas[i];
+      //   }
 
         // Calcular la media
-        media = suma / notas.length;
+         //media = suma / notas.length;
 
         // Mostrar la media
-        System.out.printf("Nota media del curso: %.2f %n", media);
-    
-        
+        // System.out.printf("Nota media del curso asignatura : %.2f %n", media);
         
     
     
-    
+
+        
+
 
     //Nmatriculas=Integer.parseInt(JOptionPane.showInputDialog ("Numero de matriculas a Ingresar"));
     System.out.println("Ingrese las matriculas de los alumnos");
@@ -76,15 +101,16 @@ public static void main(String[] args) {
     Mezcla_Natural ordenar = new Mezcla_Natural();
        
     System.out.println("Arreglo original:");
-    ordenar.mostrarArreglo(Matriculas);
+    ordenar.mostrarArregloNatural(Matriculas);
 
     System.out.println();
 
     System.out.println("Arreglo ordenado de forma ascendente:");
     Matriculas = ordenar.mezclaDirecta(Matriculas);
-    ordenar.mostrarArreglo(Matriculas);
+    ordenar.mostrarArregloNatural(Matriculas);
 
     //•	Aplicar el método de búsqueda secuencial para buscar por nombre
+
 
     
 
@@ -127,36 +153,13 @@ public static void main(String[] args) {
 
 
 
+
 } 
 
 
 
-
-
-
-
-
-
-   
-
-   
-   
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
 }
+
 
 
 

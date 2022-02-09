@@ -1,8 +1,6 @@
 package examenfinal;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class examen {
@@ -34,7 +32,7 @@ public class examen {
     "\n--------------------------------------------------\n");
 
 
-                opc = Integer.parseInt(entrada.readLine());
+                opc = sc.nextInt();
                 switch(opc)
                 {
                     case 1:
@@ -54,17 +52,7 @@ public class examen {
                     // •	Aplicar el método Mezcla Natural para ordenar de manera ascendente por matricula.
 
     
-                    Mezcla_Natural ordenar = new Mezcla_Natural();
-       
-                    System.out.println("Arreglo original:");
-                    ordenar.mostrarArreglo(Matriculas);
-
-                    System.out.println();
-
-                    System.out.println("Arreglo ordenado de forma ascendente:");
-                    Matriculas = ordenar.mezclaDirecta(Matriculas);
-                    ordenar.mostrarArreglo(Matriculas);
-                       
+                   
                         break;
                     case 5:
                             
@@ -79,21 +67,7 @@ public class examen {
                             
                               //•	Aplicar el método de búsqueda binaria para buscar por matricula
 
-    System.out.println("Arreglo original");
-    Busqueda.mostrarArreglo(Matriculas);
-    Busqueda.burbuja (Matriculas);
-    System.out.println("Arreglo ordenado");
-    Busqueda.mostrarArreglo(Matriculas);
-    System.out.println("ingrese la matricula a buscar ");
-    int numero = sc.nextInt();
-    for (int h = 0; h < Matriculas.length ; h++)
-        System.out.println (" Dato ["+h+"]: "+ Matriculas[h]);
-    int resultado = Busqueda.buscar(Matriculas, numero);
-    if (resultado != -1) {
-        System.out.println ( "Encontrado en: "+ resultado);
-    } else {
-        System.out.println ( "El dato no se encuentra en el arreglo" );
-    }
+    
                            
                             break; 
                             case 9: 
